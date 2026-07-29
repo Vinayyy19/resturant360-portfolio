@@ -1,9 +1,19 @@
-import React from 'react'
+import "./styles/lower.css";
 
-const App = () => {
+import Activation from "./components/Activation";
+import Pricing from "./components/Pricing";
+import CTA from "./components/CTA";
+import Footer from "./components/Footer";
+
+function App() {
   return (
-    <div>App</div>
-  )
+    <>
+      <Activation />
+      <Pricing />
+      <CTA />
+      <Footer />
+    </>
+  );
 }
 
-export default App
+export default App;
