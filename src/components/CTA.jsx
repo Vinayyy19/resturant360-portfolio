@@ -1,5 +1,3 @@
-
-
 function CTA() {
   return (
     <section className="service-cta">

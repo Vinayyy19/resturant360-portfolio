@@ -1,5 +1,3 @@
-
-
 const steps = [
   {
     number: "1",
@@ -28,9 +26,7 @@ function Activation() {
         {steps.map((step) => (
           <div className="step" key={step.number}>
             <div className="circle">{step.number}</div>
-
             <h3>{step.title}</h3>
-
             <p>{step.desc}</p>
           </div>
         ))}
