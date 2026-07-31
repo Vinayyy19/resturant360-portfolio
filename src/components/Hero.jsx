@@ -21,12 +21,12 @@ function Hero() {
           technology.
         </p>
         <div className="hero-buttons">
-          <button className="primary-btn">
+          <a href="#pricing-section" className="primary-btn" style={{ textDecoration: 'none' }}>
             View Plans
-          </button>
-          <button className="secondary-btn">
+          </a>
+          <a href="#cta-section" className="secondary-btn" style={{ textDecoration: 'none' }}>
             ▶ Book a Demo
-          </button>
+          </a>
         </div>
         <div className="trusted">
           👥 Trusted by 5,000+ kitchens worldwide

@@ -1,6 +1,6 @@
 import "../styles/Navbar.css";
 
-function Navbar() {
+function Navbar({ onOpenPopup }) {
   return (
     <nav className="navbar">
       <div className="logo">
@@ -9,14 +9,25 @@ function Navbar() {
 
       <ul className="nav-links">
         <li><a href="#">Home</a></li>
-        <li><a href="#">How It Works</a></li>
-        <li><a href="#">Pricing</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="#activation-section">How to Activate</a></li>
+        <li>
+          <a
+            href="#pricing-section"
+            onClick={(e) => {
+              e.preventDefault();
+              if (onOpenPopup) onOpenPopup();
+              document.getElementById("pricing-section")?.scrollIntoView({ behavior: "smooth" });
+            }}
+          >
+            Pricing
+          </a>
+        </li>
+        <li><a href="#contact-section">Contact</a></li>
       </ul>
 
-      <button className="nav-btn">
+      <a href="#cta-section" className="nav-btn">
         Get Started
-      </button>
+      </a>
     </nav>
   );
 }
