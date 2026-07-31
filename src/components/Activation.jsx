@@ -18,7 +18,7 @@ const steps = [
 
 function Activation() {
   return (
-    <section className="activation">
+    <section className="activation" id="activation-section">
       <h2>How to Activate</h2>
       <p>Set up and running in minutes, not days.</p>
 

@@ -1,33 +1,27 @@
 import "../styles/BentoGrid.css";
-import hero from "../assets/hero.png";
+import sec2 from "../../imgs/sec2.jpg";
+import sec3 from "../../imgs/sec 3.jpg";
 
 function BentoGrid() {
   return (
     <div className="bento-grid">
-      <div className="card large-card">
-        <img src={hero} alt="POS" />
-        <div className="overlay">
-          <h3>Point of Sale</h3>
-          <p>Lightning fast orders</p>
-        </div>
-      </div>
-
-      <div className="card small-card">
-        <img src={hero} alt="Kitchen" />
-        <div className="overlay">
+      {/* Kitchen Systems */}
+      <div className="card bento-card">
+        <img src={sec2} alt="Kitchen Systems" />
+        <div className="overlay-badge">
           <h3>Kitchen Systems</h3>
-          <p>Sync in real-time</p>
+          <p>Sync orders & workflow in real-time</p>
         </div>
       </div>
 
-      <div className="analytics-card">
-        <div className="icon">
-          📈
+      {/* Advanced Analytics */}
+      <div className="card bento-card">
+        <img src={sec3} alt="Advanced Analytics" />
+        <div className="overlay-badge">
+          <div className="icon">📈</div>
+          <h3>Advanced Analytics</h3>
+          <p>Track every plate, order & penny</p>
         </div>
-        <h3>Advanced Analytics</h3>
-        <p>
-          Track every plate and penny.
-        </p>
       </div>
     </div>
   );
