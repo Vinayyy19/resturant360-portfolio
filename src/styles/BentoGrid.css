@@ -1,103 +1,90 @@
-/* Main Grid */
-
-.bento-grid{
-
-    width:50%;
-
-    display:grid;
-
-    grid-template-columns:2fr 1fr;
-
-    gap:20px;
-
+/* Main Bento Grid Container */
+.bento-grid {
+  width: 50%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
 }
 
-/* Shared Card */
-
-.card{
-
-    overflow:hidden;
-
-    border-radius:28px;
-
-    position:relative;
-
-    background:white;
-
-    box-shadow:0 20px 40px rgba(0,0,0,.08);
-
+/* Claymorphic Card Base */
+.card {
+  overflow: hidden;
+  border-radius: 28px;
+  position: relative;
+  background: #ffffff;
+  border: 1.5px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.08),
+              0 4px 12px rgba(0, 0, 0, 0.04),
+              inset 0 2px 4px rgba(255, 255, 255, 0.9),
+              inset 0 -3px 8px rgba(0, 0, 0, 0.04);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.35s ease;
 }
 
-/* Images */
-
-.card img{
-
-    width:100%;
-
-    height:100%;
-
-    object-fit:cover;
-
+.card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(255, 107, 0, 0.35);
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.12),
+              0 8px 16px rgba(255, 107, 0, 0.12),
+              inset 0 2px 4px rgba(255, 255, 255, 1),
+              inset 0 -3px 8px rgba(0, 0, 0, 0.04);
 }
 
-/* Large Card */
-
-.large-card{
-
-    grid-row:span 2;
-
-    height:500px;
-
+/* Card Images */
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
 }
 
-/* Small Card */
-
-.small-card{
-
-    height:240px;
-
+.card:hover img {
+  transform: scale(1.05);
 }
 
-/* Orange Card */
-
-.analytics-card{
-
-    background:#ff6b00;
-
-    color:white;
-
-    border-radius:28px;
-
-    padding:35px;
-
-    display:flex;
-
-    flex-direction:column;
-
-    justify-content:center;
-
+/* Bento Card Heights */
+.bento-card {
+  height: 380px;
 }
 
-/* Icon */
-
-.icon{
-
-    font-size:40px;
-
-    margin-bottom:20px;
-
+/* Frosted Glass Overlay Badge (Claymorphism Text Container) */
+.overlay-badge {
+  position: absolute;
+  left: 16px;
+  right: 16px;
+  bottom: 16px;
+  padding: 16px 20px;
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1),
+              inset 0 1px 2px rgba(255, 255, 255, 0.9);
+  transition: background 0.3s ease;
 }
 
-/* Overlay */
+.overlay-badge h3 {
+  font-size: 18px;
+  font-weight: 800;
+  color: #111;
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
 
-.overlay{
+.overlay-badge p {
+  font-size: 13px;
+  font-weight: 500;
+  color: #555;
+  line-height: 1.4;
+  margin: 0;
+}
 
-    position:absolute;
-
-    left:20px;
-
-    bottom:20px;
-
-    color:white;
-
-} 
+.overlay-badge .icon {
+  font-size: 20px;
+  display: inline-block;
+  margin-bottom: 2px;
+}

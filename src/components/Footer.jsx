@@ -1,6 +1,6 @@
 function Footer() {
   return (
-    <footer>
+    <footer id="contact-section">
       <div className="footer-grid">
         <div>
           <h2>
@@ -35,7 +35,6 @@ function Footer() {
       <div className="copyright">
         © 2026 Restaurant360. All Rights Reserved.
       </div>
-
     </footer>
   );
 }

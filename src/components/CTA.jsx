@@ -1,6 +1,6 @@
-function CTA() {
+function CTA({ onOpenPopup }) {
   return (
-    <section className="service-cta">
+    <section className="service-cta" id="cta-section">
       <div className="cta-container">
         {/* Left Content */}
         <div className="cta-content">
@@ -12,8 +12,12 @@ function CTA() {
           </p>
 
           <div className="cta-buttons">
-            <button className="primary-btn">Request Demo</button>
-            <button className="secondary-btn">Contact Sales</button>
+            <button className="primary-btn" onClick={onOpenPopup}>
+              Request Demo
+            </button>
+            <button className="secondary-btn" onClick={onOpenPopup}>
+              Contact Sales
+            </button>
           </div>
         </div>
 
