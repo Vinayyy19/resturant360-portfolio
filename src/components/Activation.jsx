@@ -21,24 +21,9 @@ const steps = [
 
 function Activation() {
   return (
-
-    <section className="activation">
-
-      <div className="activation-header">
-        <span>Getting Started</span>
-
-        <h2>How to Activate</h2>
-
-        <p>
-          Launch your restaurant management system in less than 5 minutes.
-        </p>
-      </div>
-
     <section className="activation" id="activation-section">
       <h2>How to Activate</h2>
-      <p>Set up and running in minutes, not days.</p>
-
-
+     <p>Set up and running in minutes, not days.</p>
       <div className="steps">
         {steps.map((step) => (
           <div className="step" key={step.number}>
@@ -63,7 +48,7 @@ function Activation() {
         Activate Your Restaurant →
       </button>
 
-    </section>
+     </section>
   );
 }
 
